@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <header>
+    <header class="heder-border">
       <div class="container header-portpholio">
         <nav class="nav-link">
           <a href="index.html" class="logo">
@@ -29,7 +29,7 @@
           <ul class="list">
             <li class="item"><a href="index.html" class="link">Студия</a></li>
             <li class="item">
-              <a href="portfolio.html" class="link">Портфолио</a>
+              <a href="portfolio.html" class="after-link">Портфолио</a>
             </li>
             <li class="item"><a href="" class="link">Контакты</a></li>
           </ul>
@@ -76,9 +76,6 @@
               <button type="button" class="button">Маркетинг</button>
             </li>
           </ul>
-        </div>
-
-        <div class="container                                                                                                                   tainer">
           <ul class="portpholio-list">
           
             <li class="item">
@@ -87,8 +84,8 @@
               class="portpholio-img"
               src="./css/imige/potfolioimg(1).jpg"
               width="370"
-              alt="профили трёх сотрудников комрании на мониторе"
-            />
+              alt="профили трёх сотрудников комрании на мониторе"/>
+              <p class="img-text">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения  о компании или частном лице.</p>
             <div class="img-border">
               <h2 class="title-item">Технокряк</h2>
               <p class="text">Веб-сайт</p>
@@ -272,5 +269,20 @@
         </section>
       </div>
     </footer>
+    <script src="./js/modal.js">(() => {
+      const refs = {
+        openModalBtn: document.querySelector("[data-modal-open]"),
+        closeModalBtn: document.querySelector("[data-modal-close]"),
+        modal: document.querySelector("[data-modal]"),
+      };
+    
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+    
+      function toggleModal() {
+        refs.modal.classList.toggle("is-hidden");
+      }
+    })()
+    </script>
   </body>
 </html>

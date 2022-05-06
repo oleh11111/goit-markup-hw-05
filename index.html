@@ -26,7 +26,8 @@
           >
   
           <ul class="list">
-            <li class="item"><a href="index.html" class="link">Студия</a></li>
+            <li class="item active" >
+              <a href="index.html" class="after-link">Студия</a></li>
             <li class="item">
               <a href="portfolio.html" class="link">Портфолио</a>
             </li>
@@ -126,22 +127,22 @@
                 class="work-img"
                 src="./css/imige/img.jpg"
                 width="370"
-                alt="руки на клавиатуре и планшет"
-              />
+                alt="руки на клавиатуре и планшета"/>
+                <p class="text">Десктопные приложения</p>             
             </li>
             <li class="item">
               <img
                 class="work-img"
                 src="./css/imige/img(1).jpg"
-                alt="женская зука на клавиатуре"
-              />
+                alt="женская зука на клавиатуре"/>
+                <p class="text">Мобильные приложения</p>
             </li>
             <li class="item">
               <img
                 class="work-img"
                 src="./css/imige/palitra.jpg"
-                alt="в женской руке планшет с палитрой на экране"
-              />
+                alt="в женской руке планшет с палитрой на экране"/>
+                <p class="text">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
@@ -418,5 +419,20 @@
         </section>
       </div>
     </footer>
+    <script src="./js/modal.js">(() => {
+      const refs = {
+        openModalBtn: document.querySelector("[data-modal-open]"),
+        closeModalBtn: document.querySelector("[data-modal-close]"),
+        modal: document.querySelector("[data-modal]"),
+      };
+    
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+    
+      function toggleModal() {
+        refs.modal.classList.toggle("is-hidden");
+      }
+    })()
+    </script>
   </body>
 </html>

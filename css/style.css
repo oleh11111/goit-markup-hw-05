@@ -69,6 +69,9 @@ a {
 .header-portpholio {
   display: flex;
 }
+.heder-border{
+  border-bottom: 1px solid  #ECECEC;
+}
 
 .header .logo {
   margin-right: 93px;
@@ -81,11 +84,6 @@ a {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-}
-
-.header-portpholio {
-  display: flex;
-  border-bottom: 1px solid rgb(236, 236, 236);
 }
 
 .logo-word {
@@ -114,13 +112,36 @@ a {
   text-decoration: none;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1, 43;
+  line-height: 1.43;
   letter-spacing: 0.02em;
 }
+
 
 .list .link:hover,
 .list .link:focus {
   color: var(--accent-color);
+}
+
+
+
+.after-link{
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.43;
+  letter-spacing: 0.02em;
+}
+
+
+.list .after-link::after{
+  display:block; 
+  content:"" ;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
 }
 
 .contact {
@@ -348,6 +369,18 @@ a {
   margin-right: 0px;
 }
 
+.work .text{
+padding: 27px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height:1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;color: #FFFFFF;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 .comand-title {
   margin-top: 0px;
   margin-bottom: 50px;
@@ -361,6 +394,7 @@ a {
 
 .comand {
   padding: 94px 0px;
+  background-color: #F5F4FA;;
 }
 
 .comand-list {
@@ -394,6 +428,10 @@ a {
 
 .comand-list .item:nth-child(4n) {
   margin-right: 0px;
+}
+
+.comand-info-employee{
+  background-color: #ffffff;
 }
 
 .comand-list .title {
@@ -451,13 +489,12 @@ a {
   
 }
 
-.comand {
-  background-color: var(--ccolor-withe);
-}
+.clients{padding-top: 94px;
+padding-bottom: 94px;}
 
 .clients-title {
-  padding-top: 94px;
-  padding-bottom: 50px;
+  
+  margin-bottom: 50px;
 
   color: var(--secondary-text-color);
   font-weight: 700;
@@ -469,7 +506,7 @@ a {
 
 .clients-list {
   display: flex;
-  padding-bottom: 94px; 
+ 
 }
 
 .clients-item{
@@ -517,6 +554,7 @@ a {
 
 .footer-section {
   display: flex;
+  align-items: baseline;
 }
 .footer-address {
   padding-right: 70px;
@@ -594,7 +632,7 @@ a {
   display: flex;
   margin-top: 0px;
   padding-left: 0px;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   justify-content: center;
 }
 
@@ -642,12 +680,25 @@ a {
 }
 .portpholio-img {
   display: block;
-  
 }
-.img-border {
-  width: 322px; 
-  margin: 20px 24px;
-  ;
+
+.img-text{
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+
+  background-color: rgba(33, 150, 243, 0.9);
+  font-weight: 400;
+font-size: 18px;
+line-height: 1.56;
+letter-spacing: 0.03em;
+color: #FFFFFF;
+}
+
+.img-border { 
+  padding: 20px 24px;
+  
 }
 
 .portpholio .title-item {
@@ -702,9 +753,7 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.soc-link{
-  margin-top: 72px;
-}
+
 
 .soc-link-list {
   display: flex;
