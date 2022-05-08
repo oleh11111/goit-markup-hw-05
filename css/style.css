@@ -52,6 +52,7 @@ a {
 
 .header {
   display: flex;
+ 
 }
 
 .header-portpholio .logo {
@@ -75,8 +76,7 @@ a {
 
 .header .logo {
   margin-right: 93px;
-  padding-top: 24px;
-  padding-bottom: 25px;
+  
 
   color: var(--logo-color);
   text-decoration: none;
@@ -94,6 +94,7 @@ a {
   display: block;
   display: flex;
   align-items: center;
+
 }
 
 .list {
@@ -106,6 +107,7 @@ a {
 }
 
 .list .link {
+  
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--secondary-text-color);
@@ -114,6 +116,7 @@ a {
   font-size: 14px;
   line-height: 1.43;
   letter-spacing: 0.02em;
+  justify-content: center;
 }
 
 
@@ -122,29 +125,23 @@ a {
   color: var(--accent-color);
 }
 
-
-
 .after-link{
- 
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.43;
-  letter-spacing: 0.02em;
+  position: relative;
+  
+
 }
 
 
+
+
 .list .after-link::after{
-  position: relative;
+  position: absolute;
   bottom: 0;
-
-
-  display:block; 
+  left: 0;
+  display: inline-block;
   content:"" ;
   height: 4px;
+  width: 100%;
   border-radius: 2px;
   background-color: var(--accent-color);
 }

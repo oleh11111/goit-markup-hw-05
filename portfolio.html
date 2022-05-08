@@ -29,7 +29,7 @@
           <ul class="list">
             <li class="item"><a href="index.html" class="link">Студия</a></li>
             <li class="item">
-              <a href="portfolio.html" class="after-link">Портфолио</a>
+              <a href="portfolio.html" class="link after-link">Портфолио</a>
             </li>
             <li class="item"><a href="" class="link">Контакты</a></li>
           </ul>
@@ -300,20 +300,6 @@
         </section>
       </div>
     </footer>
-    <script src="./js/modal.js">(() => {
-      const refs = {
-        openModalBtn: document.querySelector("[data-modal-open]"),
-        closeModalBtn: document.querySelector("[data-modal-close]"),
-        modal: document.querySelector("[data-modal]"),
-      };
     
-      refs.openModalBtn.addEventListener("click", toggleModal);
-      refs.closeModalBtn.addEventListener("click", toggleModal);
-    
-      function toggleModal() {
-        refs.modal.classList.toggle("is-hidden");
-      }
-    })()
-    </script>
   </body>
 </html>
