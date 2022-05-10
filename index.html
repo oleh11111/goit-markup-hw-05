@@ -60,12 +60,8 @@
           Эффективные решения
           для вашего бизнеса
         </h1>
-        <button type="button" class="button" data-modal-open>Заказать услугу</button>
-        <div class="backdrop is-hidden" data-modal>
-          <div class="modal" >
-             <button  class="modal-button" data-modal-close>закрыть</button>
-          </div>
-        </div>
+        <button type="button" data-modal-open class="button">Заказать услугу</button>
+       
       </section>
       <section class="peculiarties">
         <div class="container">
@@ -423,22 +419,58 @@
               </li>
             </ul>
         </section>
+        <section class="footer-form">
+          <form class="form">          
+              <p class="form-text">Подпишитесь на рассылку</p>
+              <label class="footer-form-mail">
+                <input class="input-mail" type="email" name="E-mail"/>
+              </label> 
+                       
+            <button type="submit" class="button-form">Подписаться
+              <svg class="form-icon">
+                <use shref="./css/imige/icon-form.svg#telegram" ></use>
+              </svg>
+            </button>
+          </form>
+        </section>
       </div>
+
     </footer>
-    <script src="./js/modal.js">(() => {
-      const refs = {
-        openModalBtn: document.querySelector("[data-modal-open]"),
-        closeModalBtn: document.querySelector("[data-modal-close]"),
-        modal: document.querySelector("[data-modal]"),
-      };
-    
-      refs.openModalBtn.addEventListener("click", toggleModal);
-      refs.closeModalBtn.addEventListener("click", toggleModal);
-    
-      function toggleModal() {
-        refs.modal.classList.toggle("is-hidden");
-      }
-    })()
-    </script>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal" >
+         <button type="button" data-modal-close class="modal-button">закрыть
+           <!-- <svg>
+             <use shref="./css/imige/icon-form.svg#close-black"></use>
+           </svg> -->
+         </button>
+         <!-- <form>
+          <p class="title-modal">Оставьте свои данные, мы вам перезвоним</p>
+           <lable class="modal item">
+             <span class="name-input">имя</span>
+             <input type="name" class="modal input">
+            </lable>
+           <lable class="modal item">
+             <span>телефон</span>
+             <input type="tel" class="modal input">
+           </lable>
+           <lable class="modal item">
+             <span>почта</span>
+             <input type="email" class="modal input">
+           </lable>
+           <lable>
+             <span>коментарий</span>
+            <textarea name="coment" id="coment"    rows="10" class="coment"></textarea>
+           </lable>
+           <label>
+             <input type="checbox">
+             <p>Соглашаюсь с рассылкой и принимаю <span><a href="">Условия договора</a></span></p>
+           </label>
+           <button class="button-send" type="submit">
+             Отправить
+           </button>
+          </form> -->
+      </div>
+    </div>
+    <script src="./js/modal.js"> </script>
   </body>
 </html>
