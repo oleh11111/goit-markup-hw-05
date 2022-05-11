@@ -301,41 +301,26 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    animation-name: scale;
-    animation-duration: 250ms;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    transform: translate(-50%, -50%)scale(1);
-    transition-property: transform;
-    transition-duration: 250ms;
-    transition-timing-function: var(--cubick);
-  
+
     padding: 40px;
     width: 528px;
     min-height: 581px;
+
+    opacity: 0.8;
+    transform: translate(-50%, -50%);
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubick);
   
     background-color: rgba(255, 255, 255, 1);
-   
+
   }
   
-  /* .modal:hover {
-    animation-play-state: paused;
-  } */
-  
-  @keyframes scale {
-    0% {
-      background-color: deeppink;
-    }
-  
-    50% {
-      background-color: orange;
-    }
-  
-    100% {
-      background-color: deepskyblue;
-    }
+  .modal:hover, .modal:focus{
+    opacity: 1;
   }
+
+    
   .modal-button{
     position: absolute;
     top: 0;
