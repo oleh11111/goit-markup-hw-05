@@ -307,7 +307,7 @@
     min-height: 581px;
 
     opacity: 0.8;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) ;
     transition-property: opacity;
     transition-duration: 250ms;
     transition-timing-function: var(--cubick);
@@ -317,7 +317,7 @@
   }
   
   .modal:hover, .modal:focus{
-    opacity: 1;
+   opacity: 1;
   }
 
     
@@ -326,11 +326,13 @@
     top: 0;
     right: 0;
   }
-  /* .coment{
-    min-width: 448px;
+  .coment{
+    width:100%;
     height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2)
-  } */
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    
+  }
   
   .peculiarties {
     padding: 94px 0px;
@@ -778,15 +780,12 @@
   }
   .overlay-text{
    
-    
     padding-top: 63px;
     padding-right: 24px;
     padding-bottom: 63px;
     padding-left: 24px;
     max-width: 370px;
-    
-  
-    
+
     font-size: 18px;
     line-height: 1.56;
     letter-spacing: 0.03em;
