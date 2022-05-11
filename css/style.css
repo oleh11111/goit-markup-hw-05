@@ -306,9 +306,11 @@
     width: 528px;
     min-height: 581px;
 
-    opacity: 0.8;
-    transform: translate(-50%, -50%) ;
-    transition-property: opacity;
+    transform: translate(-50%, -50%) scale(0.8);
+    animation-name:animate-scale;
+    animation-duration: 500ms;
+    animation-timing-function: var(--cubick);
+    transition-property: transform;
     transition-duration: 250ms;
     transition-timing-function: var(--cubick);
   
@@ -316,15 +318,21 @@
 
   }
   
-  .modal:hover, .modal:focus{
-   opacity: 1;
+@keyframes animate-scale{
+  0%{
+    transform: scale(0.3);
   }
+  100%{
+    transform: scale(1);
+  }
+}
 
     
   .modal-button{
     position: absolute;
     top: 0;
     right: 0;
+    
   }
   .coment{
     width:100%;
@@ -907,16 +915,7 @@
   }
   
   
-  .wellcome {
-    display: block;
-    padding-bottom: 20px;
-    color: var(--ccolor-withe);
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-  }
+  
   
   
   .soc-link-list {
@@ -958,22 +957,29 @@
   .soc-link .icon:hover{
     fill: var(--ccolor-withe);
   }
-  
-  .footer-form{
+  .wellcome {
     
+    margin-bottom: 20px;
+    color: var(--ccolor-withe);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  .footer-form{
     margin-left: auto;
    min-width: 570px;
   }
-  
   .form{
-  
+    display: flex;
   }
   
   .input-mail{
     width: 358px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    drop-shadow 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     background-color: inherit;
   }
@@ -990,13 +996,14 @@
   }
   .button-form{
     display: flex;
+    justify-content: flex-end;
     margin-left: 12px;
-  
     padding-top: 10px;
     padding-right: 28px;
     padding-bottom: 10px;
     padding-left: 29px;
-  
+    border: 1px solid transparent;
+    height: 50px;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
@@ -1009,12 +1016,12 @@
     color: #FFFFFF;
     background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px
+    border-radius: 4px;
   }
   .form-icon{
+    justify-content: center;
     margin-left: 10px;
     width: 24px;
-    height: 24px;
-    background-color: #000000;
-    fill:var(--ccolor-withe)
+    height: 24px;    
+   
   }
